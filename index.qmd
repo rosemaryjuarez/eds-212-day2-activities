@@ -3,5 +3,44 @@ title: "eds-212-day2-activities"
 ---
 
 ```{r}
-library(tidyverse, palmerpenguins)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Find slope of f(x)
+
+```{r}
+fx <- expression(x^2)
+
+
+df_dx <- D(fx, 'x')
+
+x <- 3
+
+eval(df_dx)
+
+```
+
+## Find Slope of P(a)
+
+```{r}
+pa <- expression(2* (3 * a + 2)^4 - 5)
+
+dp_da <- D(pa, 'a')
+
+a <- 1.2
+
+eval(dp_da)
+```
+
+```{r}
+ggplot(data = penguins, 
+       aes(x = species, 
+           y = flipper_length_mm
+           )) +
+  geom_jitter(color = 'purple')+
+  labs(x = 'Palmer Penguin Species', 
+       y = 'Flipper Length(mm)') +
+  labs(title = 'Palmer Penguins Species Flipper Length')+
+  theme_linedraw()
 ```

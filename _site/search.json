@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "eds-212-day2-activities",
     "section": "",
-    "text": "library(tidyverse, palmerpenguins)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#find-slope-of-fx",
+    "href": "index.html#find-slope-of-fx",
+    "title": "eds-212-day2-activities",
+    "section": "Find slope of f(x)",
+    "text": "Find slope of f(x)\n\nfx &lt;- expression(x^2)\n\n\ndf_dx &lt;- D(fx, 'x')\n\nx &lt;- 3\n\neval(df_dx)\n\n[1] 6"
+  },
+  {
+    "objectID": "index.html#find-slope-of-pa",
+    "href": "index.html#find-slope-of-pa",
+    "title": "eds-212-day2-activities",
+    "section": "Find Slope of P(a)",
+    "text": "Find Slope of P(a)\n\npa &lt;- expression(2* (3 * a + 2)^4 - 5)\n\ndp_da &lt;- D(pa, 'a')\n\na &lt;- 1.2\n\neval(dp_da)\n\n[1] 4214.784\n\n\n\nggplot(data = penguins, \n       aes(x = species, \n           y = flipper_length_mm\n           )) +\n  geom_jitter(color = 'purple')+\n  labs(x = 'Palmer Penguin Species', \n       y = 'Flipper Length(mm)') +\n  labs(title = 'Palmer Penguins Species Flipper Length')+\n  theme_linedraw()\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   }
 ]
